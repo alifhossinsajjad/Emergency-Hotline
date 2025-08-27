@@ -4,7 +4,7 @@ function getElement(id) {
 }
 
 document.getElementById("survice-box").addEventListener("click", function (e) {
-  console.log(e.target.parentNode)
+  
   const cardInfo = e.target.parentNode.previousElementSibling.children
 
   const title = cardInfo[0].innerText;
@@ -13,7 +13,6 @@ document.getElementById("survice-box").addEventListener("click", function (e) {
 
   if (e.target.className.includes("cart-btn")) {
     
-
     alert(`${title} ${titleNumber}`);
 
     const totalCoin = getElement("coin-btn").innerText;
@@ -28,6 +27,7 @@ document.getElementById("survice-box").addEventListener("click", function (e) {
 
 
 
+
 const heartBtns = document.querySelectorAll(".heart-btn");
 
 for (let heartCount of heartBtns) {
@@ -37,6 +37,7 @@ for (let heartCount of heartBtns) {
     document.getElementById("heart-count").innerText = currentHeartCount;
   });
 }
+
 
 getElement("survice-box").addEventListener("click", function (e) {
   if (e.target.className.includes("cart-btn")) {
@@ -70,7 +71,23 @@ getElement("survice-box").addEventListener("click", function (e) {
 });
 
 
-document.getElementById("btn-clear").addEventListener("click", function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("btn-clear").addEventListener("click", function(){
   const cartConatainer = getElement("cart-container");
   cartConatainer.innerHTML = " ";
-});
+})
