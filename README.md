@@ -18,6 +18,8 @@ Ans : Event delegation is a technique in JavaScript where a parent element handl
 
 <h1 class="font-bold text-lg">5.What is the difference between preventDefault() and stopPropagation() methods?</h1>
 
-Ans : 1.<h3 class="font-bold">JavaScript preventDefault() Method:</h3> It is a method present in the event interface. This method prevents the browser from executing the default behavior of the selected element. This method can cancel the event only if the event is cancelable. For example, there are some events that can not be prevented, such as the scroll and wheel event.
+Ans :
 
- 1.<h3 class="font-bold">JavaScript stopPropagation() event method:</h3>This method is used to prevent the parent element from accessing the event. Basically, this method is used to prevent the propagation of the same event from being called. For eg,  we have a button element inside a div tag and there is an onclick event on both of them, then whenever we try to activate the event attached to the button element, then the event attached to the div element also gets executed because div is the parent of the button element.
+ 1.<h3 class="font-bold">JavaScript preventDefault() Method:</h3> It is a method present in the event interface. This method prevents the browser from executing the default behavior of the selected element. This method can cancel the event only if the event is cancelable. For example, there are some events that can not be prevented, such as the scroll and wheel event.
+
+ 2.<h3 class="font-bold">JavaScript stopPropagation() event method:</h3>This method is used to prevent the parent element from accessing the event. Basically, this method is used to prevent the propagation of the same event from being called. For eg,  we have a button element inside a div tag and there is an onclick event on both of them, then whenever we try to activate the event attached to the button element, then the event attached to the div element also gets executed because div is the parent of the button element.
