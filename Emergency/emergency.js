@@ -1,27 +1,47 @@
+let currentCopy = 0;
+
 function getElement(id) {
   const element = document.getElementById(id);
   return element;
 }
 
-document.getElementById("survice-box").addEventListener("click", function (e) {
-  const cardInfo = e.target.parentNode.previousElementSibling.children;
+window.addEventListener(
+  "click",
+  function (e) {
+    const cardInfo = e.target.parentNode?.previousElementSibling?.children;
+    if (!cardInfo) return console.log("card info not found!");
 
-  const title = cardInfo[0].innerText;
+    const title = cardInfo[0].innerText;
 
-  const titleNumber = cardInfo[2].innerText;
+    const call = cardInfo[1].innerText;
 
-  if (e.target.className.includes("cart-btn")) {
-    alert(`${title} ${titleNumber}`);
+    const titleNumber = cardInfo[2].innerText;
 
-    const totalCoin = getElement("coin-btn").innerText;
+    if (e.target.className.includes("cart-btn")) {
+      alert(`${title} ${titleNumber}`);
 
-    if (Number(totalCoin) <= 0) return alert("❌ insufficient Coint");
-    const currentCoin = parseInt(totalCoin) - 20;
+      const totalCoin = getElement("coin-btn").innerText;
 
-    getElement("coin-btn").innerText = currentCoin;
-  }
-});
+      if (Number(totalCoin) <= 0) return alert("❌ insufficient Coint");
+      const currentCoin = parseInt(totalCoin) - 20;
 
+      getElement("coin-btn").innerText = currentCoin;
+    }
+
+    //copy handler
+
+    if (e.target.className.includes("copy")) {
+      const text = `${call} ${titleNumber}`;
+      currentCopy += 1;
+      getElement("copy-btn").innerText = `${currentCopy} Copy`;
+      alert(text);
+      copyToClipBoard(text);
+    }
+  },
+  true
+);
+
+// heart count handler
 const heartBtns = document.querySelectorAll(".heart-btn");
 
 for (let heartCount of heartBtns) {
@@ -32,6 +52,7 @@ for (let heartCount of heartBtns) {
   });
 }
 
+// aside handler
 getElement("survice-box").addEventListener("click", function (e) {
   if (e.target.className.includes("cart-btn")) {
     const cartButton = e.target;
@@ -63,7 +84,14 @@ getElement("survice-box").addEventListener("click", function (e) {
   }
 });
 
+// clear btn handler
+
 document.getElementById("btn-clear").addEventListener("click", function () {
   const cartConatainer = getElement("cart-container");
   cartConatainer.innerHTML = " ";
 });
+
+// copy funtion
+function copyToClipBoard(value) {
+  window.navigator.clipboard.writeText(value);
+}
