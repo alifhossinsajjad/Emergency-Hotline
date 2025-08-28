@@ -5,7 +5,7 @@
 Ans : GetElementById is used to find a specific and unique element. GetElementByClassName is used to find an element using only the class name. QuerySelector is used to find a specific element of a child node or a parent node, similarly QuerySelectorAll is used to find every element of a child node or a parent node.
 
 
-<h1 class="font-bold text-xl">2.How do you create and insert a new element into the DOM?</h1>
+<h1 class="font-bold text-lg">2.How do you create and insert a new element into the DOM?</h1>
 
 
-Ans :
+Ans : Creating and inserting a new element into the Document Object Modle (DOM) in JavaScript involves two main steps : crating the element and then attaching it to an existing part of the DOM.
