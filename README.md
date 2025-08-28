@@ -9,3 +9,10 @@ Ans : GetElementById is used to find a specific and unique element. GetElementBy
 
 
 Ans : Creating and inserting a new element into the Document Object Modle (DOM) in JavaScript involves two main steps : crating the element and then attaching it to an existing part of the DOM.
+
+
+<h1 class="font-bold text-lg">3.What is Event Bubbling and how does it work?</h1>
+
+Ans : Event bubbling in JavaScript is a mechanism where an event triggered on a child element propagates upward through it's ancestors in the DOM. It allows parent elements to respond to events triggered by their child elements.
+
+
