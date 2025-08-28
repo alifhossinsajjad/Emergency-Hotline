@@ -16,3 +16,6 @@ Ans : Creating and inserting a new element into the Document Object Modle (DOM) 
 Ans : Event bubbling in JavaScript is a mechanism where an event triggered on a child element propagates upward through it's ancestors in the DOM. It allows parent elements to respond to events triggered by their child elements.
 
 
+<h1 class="font-bold text-lg">4.What is Event Delegation in JavaScript? Why is it useful?</h1>
+
+Ans : Event delegation is a technique in JavaScript where a parent element handles events for it's child elements , even if the children are added dynamically after the page loads. This works because events in JavaScript bubble up from the target element to it's ancestors.
